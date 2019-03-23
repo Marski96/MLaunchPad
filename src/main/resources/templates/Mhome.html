@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<html 
+		xmlns= "http://www.w3.org/1999/xhtml" 
+		xmlns:th="http://www.thymeleaf.org">
+			<head>
+				<title>MLaunchPad</title>
+				<meta http-equiv="Content-type" content="text/html; charset-UTF-8"/>
+			</head>
+				<body>
+				
+					<h1>MLaunchPad</h1>
+					<h2>Welcome to the homepage!</h2>
+			
+					
+						<table>	
+							<tr>
+								<th>Type</th>
+								<th>Info</th>
+								<th>Time</th>
+								<th>Location</th>
+							</tr>
+							
+							<tr th:each ="toDo : ${toDos}">
+								<td th:text="${toDo.Type.typeName}"></td>
+								<td th:text="${toDo.info}"></td>
+								<td th:text="${toDo.time}"></td>
+								<td th:text="${toDo.location}"></td>
+								
+							</tr>
+						</table>	
+				</body>
+	</html>
