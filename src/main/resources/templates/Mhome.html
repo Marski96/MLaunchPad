@@ -5,28 +5,48 @@
 			<head>
 				<title>MLaunchPad</title>
 				<meta http-equiv="Content-type" content="text/html; charset-UTF-8"/>
-			</head>
-				<body>
+				<link type="text/css"rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+				<link type="text/css" rel="stylesheet" href="css/mhome.css">
 				
-					<h1>MLaunchPad</h1>
-					<h2>Welcome to the homepage!</h2>
-			
-					
-						<table>	
-							<tr>
-								<th>Type</th>
-								<th>Info</th>
-								<th>Time</th>
-								<th>Location</th>
-							</tr>
-							
-							<tr th:each ="toDo : ${toDos}">
-								<td th:text="${toDo.Type.typeName}"></td>
-								<td th:text="${toDo.info}"></td>
-								<td th:text="${toDo.time}"></td>
-								<td th:text="${toDo.location}"></td>
+			</head>
+					<body>
+							<div id="wholeSiteWhereIsContent">
+								<div id=MainSqueezer>
+									<div id="SqueezeHeaders">
+										<h1 id="main-header">MLaunchPad</h1>
+											<h2 id="secondary-message">Welcome to the homepage!</h2>
+									</div>
 								
-							</tr>
-						</table>	
-				</body>
+									
+									<div id="showBorder">	
+										<div id="pictureLinks">
+											<a href="https://github.com/Marski96"><img id="roundPic" border="0" alt="GitHub" src="images/github.png" width="100" height="100" hspace="20"></a>
+											<a href="https://hhmoodle.haaga-helia.fi/login/index.php"><img id="roundPic" border="0" alt="Moodle" src="images/moodle.png" width="100" height="100" hspace="20"></a>
+											<a href="https://student.home.haaga-helia.fi/"><img id="roundPic" border="0" alt="MyNet" src="images/peppi.png" width="100" height="100" hspace="20"></a>
+											<a href="https://outlook.office.com/mail/inbox"><img id="roundPic" border="0" alt="Outlook" src="images/outlook.PNG" width="100" height="100" hspace="20"></a>
+											<a href="https://linkedin.com/in/jani-maaranen"><img id="roundPic" border="0" alt="LinkedIn" src="images/linkedin.PNG" width="100" height="100" hspace="20"></a>
+										</div>
+							
+							
+											<div id=toDoList class="container-fluid">
+												<table class="table table-striped table-dark">	
+													<tr>
+														<th scope="col">Type</th>
+														<th scope="col">Info</th>
+														<th scope="col">Time</th>
+														<th scope="col">Location</th>
+													</tr>
+											
+													<tr th:each ="toDo : ${toDos}">
+														<td th:text="${toDo.Type.typeName}"></td>
+														<td th:text="${toDo.info}"></td>
+														<td th:text="${toDo.time}"></td>
+														<td th:text="${toDo.location}"></td>
+													</tr>
+												</table>	
+											</div>
+									</div>
+								</div>
+							</div>
+					</body>
 	</html>
