@@ -21,10 +21,10 @@
 									<div id="showBorder">	
 										<div id="pictureLinks">
 											<a href="https://github.com/Marski96"><img id="roundPic" border="0" alt="GitHub" src="images/github.png" width="100" height="100" hspace="20"></a>
-											<a href="https://hhmoodle.haaga-helia.fi/login/index.php"><img id="roundPic" border="0" alt="Moodle" src="images/moodle.png" width="100" height="100" hspace="20"></a>
-											<a href="https://student.home.haaga-helia.fi/"><img id="roundPic" border="0" alt="MyNet" src="images/peppi.png" width="100" height="100" hspace="20"></a>
-											<a href="https://outlook.office.com/mail/inbox"><img id="roundPic" border="0" alt="Outlook" src="images/outlook.PNG" width="100" height="100" hspace="20"></a>
-											<a href="https://linkedin.com/in/jani-maaranen"><img id="roundPic" border="0" alt="LinkedIn" src="images/linkedin.PNG" width="100" height="100" hspace="20"></a>
+											<a href="https://hhmoodle.haaga-helia.fi/login/index.php"><img id="roundPic" border="0" alt="Moodle" src="images/moodle.jpg" width="110" height="110" hspace="20"></a>
+											<a href="https://student.home.haaga-helia.fi/"><img id="roundPic" border="0" alt="MyNet" src="images/mynet.PNG" width="125" height="100" hspace="20"></a>
+											<a href="https://outlook.office.com/mail/inbox"><img border="0" alt="Outlook" src="images/email.png" width="100" height="100" hspace="20"></a>
+											<a href="https://linkedin.com/in/jani-maaranen"><img border="0" alt="LinkedIn" src="images/linkedin.png" width="100" height="100" hspace="20"></a>
 										</div>
 							
 							
@@ -42,7 +42,7 @@
 														<td th:text="${toDo.info}"></td>
 														<td th:text="${toDo.time}"></td>
 														<td th:text="${toDo.location}"></td>
-														<td><a th:href="@{/edit/{id}(id=${toDo.id})}">Edit me</a></td>
+														<td><a th:href="@{/edit/{id}(id=${toDo.id})}"><img id="edit" border="0" alt="edit" src="images/edit.png" width="25" height="25"></a></td>
 														<td><a th:href="@{/delete/{id}(id=${toDo.id})}"><img id="delete" border="0" alt="delete" src="images/delete.png" width="25" height="25"></a></td>
 													</tr>
 												</table>	
