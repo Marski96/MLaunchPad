@@ -2,10 +2,38 @@
 	<html 
 		xmlns= "http://www.w3.org/1999/xhtml" 
 		xmlns:th="http://www.thymeleaf.org">
+			
+			
 			<head>
 				<title>MLaunchPad</title>
 			</head>
 				<body>
+				
 					<h1>edit page</h1>
+					
+						<div>
+							<form th:object="${toDo}" th:action="@{../save}" action="#" method="post">
+								
+								<input type="hidden" th:field="*{id}" class="form-control"/>
+								
+								<label for="Info">Info</label>
+								<input type="text" id="info" th:field="*{info}"/>
+								
+								<label for="Time">Time</label>
+								<input type="text" id="time" th:field="*{time}"/>
+								
+								<label for="Location">Location</label>
+								<input type="text" id="location" th:field="*{location}"/>
+								
+								<label for="typeList">Type</label>
+								<select id="typeList" th:field="*{type}" class="form-control">
+									<option th:each="type: ${types}" th:value="${type.typeID}" th:text="${type.typeName}">
+								</select>
+								
+								<input type="submit" value="Save"></input>
+							</form>
+								<a th:href="@{/Mhome}">Cancel</a>
+						</div>	
+						
 				</body>
 	</html>

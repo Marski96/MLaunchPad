@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.MLaunchPad.domain.TypeRepository;
+import com.example.MLaunchPad.domain.toDo;
 import com.example.MLaunchPad.domain.toDoRepository;
 
 @Controller
@@ -49,8 +50,15 @@ public class LaunchPadController {
 	@RequestMapping(value="/edit/{id}")
 		public String edit(@PathVariable("id") long id, Model model) {
 			model.addAttribute("toDo", toDoRepo.findById(id));
-			model.addAttribute("type", typeRepo.findAll());
+			model.addAttribute("types", typeRepo.findAll());
 			return "edit";
+	}
+	
+	//Save a book
+	@RequestMapping(value="/save", method = RequestMethod.POST)
+	public String saveBook(toDo toDo) {
+		toDoRepo.save(toDo);
+		return "redirect:Mhome";
 	}
 	
 
