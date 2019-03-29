@@ -5,35 +5,69 @@
 			
 			
 			<head>
+				<meta http-equiv="Content-type" content="text/html; charset-UTF-8"/>
+				<link type="text/css" rel="stylesheet" href="/css/editPage.css" th:gref="@{css/editPage.css}" />
+			
 				<title>MLaunchPad</title>
+				
+				
 			</head>
 				<body>
 				
-					<h1>edit page</h1>
+					<h1 id="headText">Edit ToDo</h1>
 					
-						<div>
 							<form th:object="${toDo}" th:action="@{../save}" action="#" method="post">
 								
 								<input type="hidden" th:field="*{id}" class="form-control"/>
-								
+						
+						
+						
+							<div id="infoDiv">
 								<label for="Info">Info</label>
-								<input type="text" id="info" th:field="*{info}"/>
-								
+								<input id="info" th:field="*{info}"></input>
+							</div>
+							
+							
+							
+							<div id="timeDiv">
 								<label for="Time">Time</label>
 								<input type="text" id="time" th:field="*{time}"/>
-								
+							</div>
+							
+							
+							
+							<div id="locationDiv">
 								<label for="Location">Location</label>
 								<input type="text" id="location" th:field="*{location}"/>
-								
+							</div>
+							
+							
+							
+							<div id="typeDiv">
 								<label for="typeList">Type</label>
 								<select id="typeList" th:field="*{type}" class="form-control">
 									<option th:each="type: ${types}" th:value="${type.typeID}" th:text="${type.typeName}">
 								</select>
+							</div>
 								
+								
+								
+							<div id="saveDiv">
 								<input type="submit" value="Save"></input>
+							</div>
+							
+								
+								
+							<div id="cancelDiv">	
+								<a href="/Mhome"><button>Cancel</button></a>
+							</div>
+							
+							
+							
 							</form>
-								<a th:href="@{/Mhome}">Cancel</a>
-						</div>	
+	
+						
+						
 						
 				</body>
 	</html>
