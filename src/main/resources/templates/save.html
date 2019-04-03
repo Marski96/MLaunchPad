@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset-UTF-8"/>
+		<link type="text/css" rel="stylesheet" href="/css/create.css" th:gref="@{css/create.css}">
+		
+		<title>MLaunchPad</title>
+	
+	</head>
+		<body>
+			
+			<h1>Create new</h1>
+	
+			<div>
+				<form th:object="${toDo}" th:action="@{save}" action="#" method="post">
+					
+					<input type="hidden" th:field="*{id}" class="form-control"/>
+					
+					
+					<div id="infoDiv">
+						<input type="text" id="info" th:field="*{info}" placeholder="Description..."/>
+					</div>
+					
+					<div id="timeDiv">
+						<input type="text" id="time" th:field="*{time}" placeholder="Time (hh:mm-hh:mm)"/>
+					</div>
+					
+					<div id="locationDiv">
+						<input type="text" id="location" th:field="*{location}" placeholder="Location"/>
+					</div>
+				
+					<div id="typeDiv">
+						<select id="typeList" th:field="*{type}" class="form-control">
+							<option th:each="type: ${types}" th:value="${type.typeID}" th:text="${type.typeName}"></option>	
+						</select>
+					</div>
+					
+					
+					<div id="saveDiv">
+						<input type="submit" value="Save"></input>
+					</div>
+					
+				</form>
+			</div>		
+	
+		</body>
+</html>

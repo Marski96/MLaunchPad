@@ -27,6 +27,7 @@ public class MLaunchPadApplication {
 		return (args)-> {
 			
 			log.info("SAVING TYPES");
+			TypeRepo.save(new Type("  "));
 			TypeRepo.save(new Type("Exam"));
 			TypeRepo.save(new Type("FreeTime"));
 			TypeRepo.save(new Type("Gym"));

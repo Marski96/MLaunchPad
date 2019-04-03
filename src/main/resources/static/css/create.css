@@ -1,0 +1,49 @@
+body {
+	text-align: center;
+}
+
+input {
+	width: 600px;
+	height:50px
+	
+}
+
+#infoDiv {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#timeDiv {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#locationDiv {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+
+#typeDiv {
+	padding: 15px;
+}
+
+#cancelDiv {
+	padding-top: 15px;
+	width: 100%;
+}
+
+
+label {
+	display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+
+h1 {
+	width: 100%;
+	text-decoration: underline;
+}

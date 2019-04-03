@@ -39,6 +39,22 @@ public class LaunchPadController {
 			return "Mhome";
 	}
 	
+	//Create new toDo
+	@RequestMapping(value="/createnew")
+	public String createNewTodo(Model model) {
+		model.addAttribute("toDo" , new toDo());
+		model.addAttribute("types" , typeRepo.findAll());
+		return "save";
+	}
+	
+	//Save a book from button and route to mhome
+	@RequestMapping(value="/save", method=RequestMethod.POST)
+	public String saveToDo(toDo todo) {
+		toDoRepo.save(todo);
+		return "redirect:Mhome";
+	}
+	
+	
 	//Delete toDo
 	@RequestMapping(value="/delete/{id}", method=RequestMethod.GET)
 		public String deleteToDo(@PathVariable("id") long id, Model model) {
@@ -47,18 +63,11 @@ public class LaunchPadController {
 	}
 	
 	//Edit toDo
-	@RequestMapping(value="/edit/{id}")
-		public String edit(@PathVariable("id") long id, Model model) {
+	@RequestMapping(value="/edit/{id}" , method=RequestMethod.GET)
+		public String editToDo(@PathVariable("id") long id, Model model) {
 			model.addAttribute("toDo", toDoRepo.findById(id));
 			model.addAttribute("types", typeRepo.findAll());
 			return "edit";
-	}
-	
-	//Save a book
-	@RequestMapping(value="/save", method = RequestMethod.POST)
-	public String saveBook(toDo toDo) {
-		toDoRepo.save(toDo);
-		return "redirect:Mhome";
 	}
 	
 
