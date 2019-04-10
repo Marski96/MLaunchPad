@@ -20,7 +20,7 @@ public class LaunchPadController {
 	private TypeRepository typeRepo;
 	
 	//Open login
-	@RequestMapping(value="/login")
+	@RequestMapping(value="login")
 		public String login() {
 			return "login";
 	} 
