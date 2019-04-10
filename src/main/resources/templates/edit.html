@@ -7,8 +7,8 @@
 			
 			<head>
 				<meta http-equiv="Content-type" content="text/html; charset-UTF-8"/>
-				<link type="text/css" rel="stylesheet" href="/css/editPage.css" th:gref="@{css/editPage.css}" />
-				<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+				<link type="text/css" rel="stylesheet" href="@{/css/editPage.css}" th:href="@{css/editPage.css}" />
+				<link rel="stylesheet" href="@{https://www.w3schools.com/w3css/4/w3.css}">
 			
 				<title>MLaunchPad</title>
 				
@@ -27,7 +27,7 @@
 							<div id="infoDiv">
 								<label for="Info">Info</label>
 								<input id="info" th:field="*{info}"></input>
-							
+							</div>
 							
 							
 							<div id="timeDiv">
