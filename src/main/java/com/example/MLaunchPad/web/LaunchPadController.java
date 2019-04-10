@@ -19,14 +19,20 @@ public class LaunchPadController {
 	@Autowired
 	private TypeRepository typeRepo;
 	
-	//Open login
-	@RequestMapping(value="login")
-		public String login() {
-			return "login";
+	//redirect to login
+	@RequestMapping(value="/")
+		public String redirect() {
+			return "redirect:login";
+	} 
+	
+	//login page
+	@RequestMapping(value="/login")
+	public String login() {
+		return "login";
 	} 
 	
 	//Logout redirects to login page
-	@RequestMapping(value="logout")
+	@RequestMapping(value="/logout")
 	public String logout() {
 		return "redirect:login";
 	}
