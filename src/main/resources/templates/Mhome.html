@@ -71,6 +71,8 @@
 										</div>
 									</div>
 									
+									
+									
 								</div>	
 							
 							
@@ -93,20 +95,47 @@
 													</tr>
 												</table>
 													
-														
+					
 														<a id="createButton" href="/createnew" class="btn btn-success">Create new</a>
+
+														
+														<div id="emptySpaceCreateAndLogout"></div>
+														
 												
-														<div id="emptySpaceCreateAndLogout">
-														</div>
-														
-														
 														<form th:action="@{/logout}"method="post">
 															<button id="logoutButton" type="submit" value="Sign Out" class="btn btn-danger">Logout</button>
 														</form>
+											
+													<div id="emptySpaceCreateAndLogout"></div>
+													
+													
+													<h1 id="calendarText">Upcoming event in Jani's calenadr</h1>
+														<div id="GoogleCalendar">
+															<iframe src="https://calendar.google.com/calendar/embed?src=jani.maaranen87%40gmail.com&ctz=Europe%2FHelsinki" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+														</div>
+													
+													<div id="emptySpaceCreateAndLogout"></div>
+													
+													
+													<h1 id="musicText">[[${#httpServletRequest.remoteUser}]] here's some music listen to while working:</h1>
 														
+													<div id="spotify">
+															<iframe src="https://open.spotify.com/embed/user/212ohanqfmrmgxemjqzwfkt6q/playlist/4GxasIKosQ3z7i4WLat3Rb" width="300" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+															<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZEVXcDhsDFopSqTU" width="300" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+															<iframe src="https://open.spotify.com/embed/user/212ohanqfmrmgxemjqzwfkt6q/playlist/6YZaGCZ6iP6cIuJkmT9hq6" width="300" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+													</div>
 														
-											</div>					
+											</div>
+															
 										</div>
+											
+											<div id="emptySpaceCreateAndLogout"></div>
+											
+											 <footer>
+											  <p id="copyrights">Made by: Jani Maaranen</p>
+											  <p id="descpition">Made for personal use, all functions might not work with other users.</p>
+											</footer> 
+																					
 									</div>
 									<!-- ------------------------------------------CONTENT ENDS----------------------------------------------------------------- -->
 									
