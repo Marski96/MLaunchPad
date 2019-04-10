@@ -6,13 +6,14 @@
 			<head>
 				<title>MLaunchPad</title>
 				<meta http-equiv="Content-type" content="text/html; charset-UTF-8"/>
-				<link type="text/css"rel="stylesheet" href="@{/css/bootstrap.min.css}" th:href="@{css/bootstrap.min.css}" />
-				<link type="text/css" rel="stylesheet" href="@{/css/mhome.css}">
-				<link rel="stylesheet" href="@{https://www.w3schools.com/w3css/4/w3.css}">
+				<link type="text/css"rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+				<link type="text/css" rel="stylesheet" href="/css/mhome.css" th:href="@{/css/mhome.css}">
+				<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 				
 			</head>
 					<body>
 					
+					<div id="dp-container" th:style="'background-image:url(' + @{https://upload.wikimedia.org/wikipedia/commons/5/5c/Earth-moon.jpg} + ');'">
 					
 					<!-- -------------------------HEADERS------------------------------------- -->
 							<div id="wholeSiteWhereIsContent">
@@ -95,14 +96,16 @@
 													</tr>
 												</table>
 													
-					
-														<a id="createButton" href="/createnew" class="btn btn-success">Create new</a>
-
+														
+														<form th:action="@{/createnew}" method="post">
+															<button id="CreateButton" type="submit" value="Create new" class="btn btn-success">Create new</button>
+														</form>
+														
 														
 														<div id="emptySpaceCreateAndLogout"></div>
 														
 												
-														<form th:action="@{/logout}"method="post">
+														<form th:action="@{/logout}" method="post">
 															<button id="logoutButton" type="submit" value="Sign Out" class="btn btn-danger">Logout</button>
 														</form>
 											
@@ -136,6 +139,7 @@
 											  <p id="descpition">Made for personal use, all functions might not work with other users.</p>
 											</footer> 
 																					
+										</div>
 									</div>
 									<!-- ------------------------------------------CONTENT ENDS----------------------------------------------------------------- -->
 									

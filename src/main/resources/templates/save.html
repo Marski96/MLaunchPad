@@ -4,8 +4,8 @@
 		xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset-UTF-8"/>
-		<link type="text/css" rel="stylesheet" href="@{/css/create.css}" th:href="@{css/create.css}">
-		<link rel="stylesheet" href="@{https://www.w3schools.com/w3css/4/w3.css}">
+		<link type="text/css" rel="stylesheet" href="/css/create.css" th:href="@{/css/create.css}">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		
 		<title>MLaunchPad</title>
 	
@@ -47,7 +47,7 @@
 			</div>
 			
 							<div id="cancel">
-								<a href="/Mhome" >Cancel</a>
+								<a th:href="@{/Mhome}">Cancel</a>
 							</div>		
 	
 		</body>
