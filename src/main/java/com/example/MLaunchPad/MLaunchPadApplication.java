@@ -38,8 +38,10 @@ public class MLaunchPadApplication {
 			TypeRepo.save(new Type("Work"));
 			
 			log.info("SAVING EXAMPLE TODOS");
-			toDoRepo.save(new toDo(0, "Math exam", "12:00-13:00", "Pasila", TypeRepo.findBytypeName("Exam").get(0)));
-			toDoRepo.save(new toDo(0, "Gym with Max", "16:00-17:30", "FitnessWorld Helsinki", TypeRepo.findBytypeName("Gym").get(0)));
+			toDoRepo.save(new toDo(0, "Math exam", "30.4, 12:00-13:00", "Pasila", TypeRepo.findBytypeName("Exam").get(0)));
+			toDoRepo.save(new toDo(0, "Gym with Max", "1.5, 16:00-17:30", "FitnessWorld Helsinki", TypeRepo.findBytypeName("Gym").get(0)));
+			toDoRepo.save(new toDo(0, "Read to test", "12.5, 13:00-16:00", "Pasila Library", TypeRepo.findBytypeName("Study").get(0)));
+			toDoRepo.save(new toDo(0, "Meeting", "16.5, 9:00-11:00", "Office", TypeRepo.findBytypeName("Work").get(0)));
 			
 			log.info("SAVING USERS");
 			Account account1 = new Account("user", "$2a$10$h8.RIfceUJWfTzRM14liCe.YgSP5TR7zRsVcuisaHCtLHuwTxSDlq", "exampleUser@gmail.com", "USER");
