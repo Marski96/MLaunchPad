@@ -7,6 +7,11 @@
 	opacity: 0.7;
 }
 
+#toDoList {
+	padding-top: 10px;
+	
+}
+
 #secondary-message {
 	text-align: center;
 	padding-bottom: 10px;
@@ -45,6 +50,23 @@
 	opacity: 0.9;
 }
 
+#createButton {
+	width: 200px;
+	height: 40px;
+}
+
+#logoutButton {
+	width: 200px;
+	height: 40px;
+}
+
+#emptySpaceCreateAndLogout {
+	padding: 10px;
+}
+
+
 body {
 	background-image: url("../../images/background.jpg");
+	font-family: Arial;
+ 	margin: 0;
 }

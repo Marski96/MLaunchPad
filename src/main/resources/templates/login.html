@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-	<html 
-		xmlns= "http://www.w3.org/1999/xhtml" 
-		xmlns:th="http://www.thymeleaf.org">
-			<head>
-				<title>MLaunchPad</title>
-			</head>
-				<body>
-					<h1 th:text="'Hello ' + ${name}">Hello</h1>
-				</body>
-	</html>
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+ 		xmlns:th="http://www.thymeleaf.org"
+ 		xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+<link type="text/css"rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+<link type="text/css"rel="stylesheet" href="css/login.css" th:href="@{css/login.css}" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<title>Login MLaunchPad</title>
+</head>
+	<body>
+
+
+
+<div id="emptyDivTOP"></div>
+	
+	<div class="w3-container w3-center w3-animate-left">
+			<h1>MLaunchPad Login</h1>
+
+		<div id="outsideBOX">
+				<h2>Please, sign in</h2>
+				
+				<div id="wholeLogin" class="mx-auto" style="width: 200px;">
+					
+					<div class="row">
+						<div th:if="${param.error}" class="alert alert-danger">
+							<div th:if="${param.error}">
+								Invalid username or password.
+							</div>
+							
+							<div th:if="${param.logout}">
+						        You have been logged out.
+						    </div>
+						</div>
+					</div>
+					
+						<form th:action="@{/login}" method="post">
+						
+							<div><label>Username: <input type="text" name="username"/> </label></div>
+							<div><label>Password: <input type="password" name="password"/> </label></div>
+							<div><input type="submit" value="Sign In"/> </div>
+						</form>
+					</div>
+		</div>
+	</div>
+		
+		
+	</body>
+</html>

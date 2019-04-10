@@ -1,0 +1,38 @@
+#emptyDivTOP {
+	padding-top: 250px;
+	
+}
+
+h1 {
+	text-align: center;
+	padding-bottom: 10px;
+	border: 1px solid black;
+	border-radius: 25px;
+	background-color: white;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	text-shadow: 2px 1px white;
+	background-color: #00ae00;
+	font-size: 40px;
+	
+}
+
+h2 {
+	text-align: center;
+}
+
+#outsideBOX {
+  border: 1px solid black;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+body {
+	padding-left: 40%;
+	padding-right: 40%;
+	background-color: #e1e1e1;
+	font-family: Arial;
+  	margin: 0;
+}

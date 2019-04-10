@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 	<html 
 		xmlns= "http://www.w3.org/1999/xhtml" 
-		xmlns:th="http://www.thymeleaf.org">
+		xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 			<head>
 				<title>MLaunchPad</title>
 				<meta http-equiv="Content-type" content="text/html; charset-UTF-8"/>
 				<link type="text/css"rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
 				<link type="text/css" rel="stylesheet" href="/css/mhome.css">
+				<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 				
 			</head>
 					<body>
 							<div id="wholeSiteWhereIsContent">
 								<div id=MainSqueezer>
 									<div id="SqueezeHeaders">
-										<h1 id="main-header">MLaunchPad</h1>
-											<h2 id="secondary-message">Welcome to the homepage!</h2>
+										<h1 class="w3-center w3-animate-left" id="main-header">MLaunchPad</h1>
+											<h2 class="w3-center w3-animate-right" id="secondary-message">Welcome to the homepage [[${#httpServletRequest.remoteUser}]]!</h2>
 									</div>
 								
+								<div class="w3-container w3-center w3-animate-zoom">
 									
 									<div id="showBorder">	
 										<div id="pictureLinks">
-											<a href="https://github.com/Marski96"><img id="roundPic" border="0" alt="GitHub" src="images/github.png" width="100" height="100" hspace="20"></a>
-											<a href="https://hhmoodle.haaga-helia.fi/login/index.php"><img id="roundPic" border="0" alt="Moodle" src="images/moodle.jpg" width="110" height="110" hspace="20"></a>
-											<a href="https://student.home.haaga-helia.fi/"><img id="roundPic" border="0" alt="MyNet" src="images/mynet.PNG" width="125" height="100" hspace="20"></a>
-											<a href="https://outlook.office.com/mail/inbox"><img border="0" alt="Outlook" src="images/email.png" width="100" height="100" hspace="20"></a>
-											<a href="https://linkedin.com/in/jani-maaranen"><img border="0" alt="LinkedIn" src="images/linkedin.PNG" width="100" height="100" hspace="20"></a>
+											<a href="https://github.com/Marski96" target="_blank"><img id="roundPic" border="0" alt="GitHub" src="images/github.png" width="100" height="100" hspace="20"></a>
+											<a href="https://hhmoodle.haaga-helia.fi/login/index.php" target="_blank"><img id="roundPic" border="0" alt="Moodle" src="images/moodle.jpg" width="110" height="110" hspace="20"></a>
+											<a href="https://student.home.haaga-helia.fi/" target="_blank"><img id="roundPic" border="0" alt="MyNet" src="images/mynet.PNG" width="125" height="100" hspace="20"></a>
+											<a href="https://outlook.office.com/mail/inbox" target="_blank"><img border="0" alt="Outlook" src="images/email.png" width="100" height="100" hspace="20"></a>
+											<a href="https://linkedin.com/in/jani-maaranen" target="_blank"><img border="0" alt="LinkedIn" src="images/linkedin.PNG" width="100" height="100" hspace="20"></a>
 										</div>
 							
 							
@@ -47,8 +50,18 @@
 													</tr>
 												</table>
 													
-													<a href="/createnew" class="btn btn-success">Create new</a>
-													
+														
+														<a id="createButton" href="/createnew" class="btn btn-success">Create new</a>
+												
+														<div id="emptySpaceCreateAndLogout">
+														</div>
+														
+														
+														<form th:action="@{/logout}"method="post">
+															<button id="logoutButton" type="submit" value="Sign Out" class="btn btn-danger">Logout</button>
+														</form>
+									</div>		
+															
 											</div>
 									</div>
 								</div>

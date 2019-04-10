@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 	<html 
 		xmlns= "http://www.w3.org/1999/xhtml" 
-		xmlns:th="http://www.thymeleaf.org">
+		xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 			
 			
 			<head>
 				<meta http-equiv="Content-type" content="text/html; charset-UTF-8"/>
 				<link type="text/css" rel="stylesheet" href="/css/editPage.css" th:gref="@{css/editPage.css}" />
+				<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 			
 				<title>MLaunchPad</title>
 				
@@ -25,7 +27,6 @@
 							<div id="infoDiv">
 								<label for="Info">Info</label>
 								<input id="info" th:field="*{info}"></input>
-							</div>
 							
 							
 							
@@ -58,7 +59,10 @@
 							
 							
 							</form>
-	
+							
+							<div>
+								<a href="/Mhome" >Cancel</a>
+							</div>
 						
 						
 						

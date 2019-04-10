@@ -19,21 +19,20 @@ public class LaunchPadController {
 	@Autowired
 	private TypeRepository typeRepo;
 	
-	
-	//Redirect straight to login
-	@RequestMapping(value="/")
-		public String redirect() {
-			return "redirect:login";
+	//Open login
+	@RequestMapping(value="/login")
+		public String login() {
+			return "login";
 	} 
 	
-	//Open login site
-	@RequestMapping(value="/login")
-		public String login() {	
-			return "redirect:Mhome";
+	//Logout redirects to login page
+	@RequestMapping(value="logout")
+	public String logout() {
+		return "redirect:login";
 	}
 	
-	//Homepage
-	@RequestMapping(value="/Mhome")
+	//Homepage opens
+	@RequestMapping(value="/Mhome", method = RequestMethod.GET)
 		public String home(Model model) {
 			model.addAttribute("toDos", toDoRepo.findAll());
 			return "Mhome";
@@ -47,7 +46,7 @@ public class LaunchPadController {
 		return "save";
 	}
 	
-	//Save a book from button and route to mhome
+	//Save a toDo from button and route to mhome
 	@RequestMapping(value="/save", method=RequestMethod.POST)
 	public String saveToDo(toDo todo) {
 		toDoRepo.save(todo);
@@ -55,14 +54,14 @@ public class LaunchPadController {
 	}
 	
 	
-	//Delete toDo
+	//Delete selected toDo
 	@RequestMapping(value="/delete/{id}", method=RequestMethod.GET)
 		public String deleteToDo(@PathVariable("id") long id, Model model) {
 			toDoRepo.deleteById(id);
 			return "redirect:../Mhome";
 	}
 	
-	//Edit toDo
+	//Edit selected toDo
 	@RequestMapping(value="/edit/{id}" , method=RequestMethod.GET)
 		public String editToDo(@PathVariable("id") long id, Model model) {
 			model.addAttribute("toDo", toDoRepo.findById(id));

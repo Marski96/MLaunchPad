@@ -1,5 +1,7 @@
 body {
 	text-align: center;
+	font-family: Arial;
+  	margin: 0;
 }
 
 input {
@@ -28,9 +30,11 @@ input {
 	padding: 15px;
 }
 
-#cancelDiv {
+#cancel {
 	padding-top: 15px;
 	width: 100%;
+	
+	
 }
 
 
