@@ -12,15 +12,20 @@
 				
 			</head>
 					<body>
+					
+					
+					<!-- -------------------------HEADERS------------------------------------- -->
 							<div id="wholeSiteWhereIsContent">
 								<div id=MainSqueezer>
 									<div id="SqueezeHeaders">
 										<h1 class="w3-center w3-animate-left" id="main-header">MLaunchPad</h1>
 											<h2 class="w3-center w3-animate-right" id="secondary-message">Welcome to the homepage [[${#httpServletRequest.remoteUser}]]!</h2>
 									</div>
-								
+					<!-- ---------------------------HEADERS END------------------------------------- -->
+							
+							
+							<!-- --------------------------------------CONTENT----------------------------------------- -->	
 								<div class="w3-container w3-center w3-animate-zoom">
-									
 									<div id="showBorder">	
 										<div id="pictureLinks">
 										
@@ -98,10 +103,13 @@
 														<form th:action="@{/logout}"method="post">
 															<button id="logoutButton" type="submit" value="Sign Out" class="btn btn-danger">Logout</button>
 														</form>
-									</div>		
-															
-											</div>
+														
+														
+											</div>					
+										</div>
 									</div>
+									<!-- ------------------------------------------CONTENT ENDS----------------------------------------------------------------- -->
+									
 								</div>
 							</div>
 					</body>
